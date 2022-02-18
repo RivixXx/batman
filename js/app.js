@@ -1,8 +1,14 @@
-const sliderThumbs = new Swiper('.slider-thumbs', {
+    const burger = document.querySelector('.burger');
+    const navigation = document.querySelector('.navigation');
+
+
+try {
+    const sliderThumbs = new Swiper('.slider-thumbs', {
     loop: true,
     spaceBetween: 20,
     slidesPerView: 3,
     centeredSlides: true,
+    loopedSlides: 4,
 });
 
 sliderThumbs.on('click', (swiper) => {
@@ -17,3 +23,6 @@ const sliderMain = new Swiper('.slider-main', {
 
 sliderThumbs.controller.control = sliderMain;
 sliderMain.controller.control = sliderThumbs;
+} catch {
+
+};
